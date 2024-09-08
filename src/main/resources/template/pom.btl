@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>${groupId}</groupId>
+    <artifactId>${artifactId}</artifactId>
+    <version>${version}</version>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.22</version>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <!-- 当前项目仓库，有一些自己的maven依赖，私服中没有的，可以通过此仓库提供 -->
+            <id>project-repo</id>
+            <!-- 如果是在子工程里需要取上一级目录\..\ file://\${<project.basedir}\..\repo -->
+              <!--  <url>file://\${<project.basedir}\..\repo</url> -->
+            <url>file://\${project.basedir}\repo</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <!-- 当前项目仓库，有一些自己的maven依赖，私服中没有的，可以通过此仓库提供 -->
+            <id>project-repo</id>
+            <!-- 如果是在子工程里需要取上一级目录\..\ file://\${<project.basedir}\..\repo -->
+              <!--  <url>file://\${project.basedir}\..\repo</url> -->
+            <url>file://\${project.basedir}\repo</url>
+        </pluginRepository>
+    </pluginRepositories>
+</project>

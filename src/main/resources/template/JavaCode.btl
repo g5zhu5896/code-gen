@@ -1,0 +1,15 @@
+package ${packageName};
+
+import lombok.Data;
+
+@Data
+public class ${className} {
+     public static void main(String[] args) {
+        System.out.println(Data.class.getName());
+     }
+
+#for(item in fields){
+    private ${item.type} ${item.name};
+
+#}
+}
