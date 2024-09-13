@@ -42,7 +42,7 @@ public class ApacheCompressJar {
             File codeFile = new File(codePath);
             for (File file : FileUtil.loopFiles(codeFile)) {
                 if (file.isFile()) {
-                    String entryName = StrUtil.removePrefix(StrUtil.removePrefix(file.getAbsolutePath(), codeFile.getAbsolutePath()), "/");
+                    String entryName = StrUtil.removePrefix(StrUtil.removePrefix(file.getAbsolutePath(), codeFile.getAbsolutePath()), File.separator);
                     addFile(jarOutput, file, entryName);
                 }
             }
@@ -83,7 +83,7 @@ public class ApacheCompressJar {
             File codeFile = new File(codePath);
             for (File file : FileUtil.loopFiles(codeFile)) {
                 if (file.isFile()) {
-                    String entryName = StrUtil.removePrefix(StrUtil.removePrefix(file.getAbsolutePath(), codeFile.getAbsolutePath()), "/");
+                    String entryName = StrUtil.removePrefix(StrUtil.removePrefix(file.getAbsolutePath(), codeFile.getAbsolutePath()), File.separator);
                     addFile(jarOutput, file, entryName);
                 }
             }
@@ -167,7 +167,7 @@ public class ApacheCompressJar {
             File codeFile = new File(codePath);
             for (File file : FileUtil.loopFiles(codeFile)) {
                 if (file.isFile()) {
-                    String entryName = StrUtil.removePrefix(StrUtil.removePrefix(file.getAbsolutePath(), codeFile.getAbsolutePath()), "/");
+                    String entryName = StrUtil.removePrefix(StrUtil.removePrefix(file.getAbsolutePath(), codeFile.getAbsolutePath()), File.separator);
                     addFile(jarOutput, file, entryName);
                 }
             }
